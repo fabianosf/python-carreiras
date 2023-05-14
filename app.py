@@ -30,11 +30,13 @@ VAGAS = [{
 }]
 
 
+# Rota Home
 @app.route('/')
 def hello():
   return render_template('home.html', vagas=VAGAS)
 
 
+# Endpoint
 @app.route('/vagas')
 def lista_vagas():
   return jsonify(VAGAS)
